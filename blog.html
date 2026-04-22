@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Insights on web development, product design, SaaS, and digital strategy from the Lanre Digital team." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lanredigital.com/blog.html" />
+  <title>Blog — Lanre Digital Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { display: ['Fraunces','Georgia','serif'], body: ['DM Sans','sans-serif'] },
+          colors: {
+            cream:  { 50:'#fdfaf5', 100:'#f9f3e8', 200:'#f2e6d0', 300:'#e8d5b2' },
+            forest: { 400:'#5a7c65', 500:'#3d6b4f', 600:'#2d5240', 700:'#1e3d2f', 800:'#112a1f' },
+            amber:  { warm:'#c8832a' },
+            ink:    { 50:'#f7f6f4', 100:'#eeebe6', 300:'#b8b0a4', 500:'#6b6358', 700:'#3a342e', 900:'#1a1612' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .active-filter {
+      background-color: #3d6b4f;
+      color: white;
+      border-color: #3d6b4f;
+    }
+  </style>
+</head>
+<body class="font-body bg-cream-50 text-ink-700 dark:bg-ink-900 dark:text-ink-100 transition-colors duration-300">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-forest-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="banner">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12" aria-label="Main navigation">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="Lanre Digital — Home">
+          <div class="w-9 h-9 rounded-xl bg-forest-500 flex items-center justify-center shadow-md"><span class="font-display font-semibold text-white text-base">L</span></div>
+          <span class="font-display font-medium text-lg text-ink-900 dark:text-cream-50 hidden sm:block">Lanre<span class="text-forest-500">Digital</span></span>
+        </a>
+        <ul class="hidden lg:flex items-center gap-1" role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="w-10 h-10 rounded-xl flex items-center justify-center text-ink-500 dark:text-ink-300 hover:bg-cream-200 dark:hover:bg-ink-700 transition-colors" aria-label="Toggle dark mode">
+            <svg id="icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg id="icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 bg-forest-500 hover:bg-forest-600 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">Let's Talk</a>
+          <button id="menu-toggle" class="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center text-ink-500 hover:bg-cream-200 dark:hover:bg-ink-700 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="menu-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg id="menu-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden">
+        <div class="py-4 border-t border-cream-200 dark:border-ink-700 space-y-1">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="services.html" class="mobile-nav-link">Services</a>
+          <a href="blog.html" class="mobile-nav-link">Blog</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+          <div class="pt-3 border-t border-cream-200 dark:border-ink-700">
+            <a href="contact.html" class="block bg-forest-500 text-white text-center px-5 py-3 rounded-xl font-medium">Let's Talk</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="page-header" aria-labelledby="blog-page-title">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
+        <div class="label-tag mb-5 inline-flex">Ideas &amp; insights</div>
+        <h1 id="blog-page-title" class="font-display text-5xl lg:text-6xl text-ink-900 dark:text-cream-50 font-medium leading-tight mb-5">
+          From the <span class="italic font-light text-forest-500">blog</span>
+        </h1>
+        <p class="text-ink-500 dark:text-ink-400 text-lg max-w-lg mx-auto leading-relaxed font-light">
+          Thoughts on building software, growing digital products, and navigating the ever-changing world of the web.
+        </p>
+      </div>
+    </section>
+
+    <!-- Search + Filter -->
+    <section class="py-8 border-b border-cream-200 dark:border-ink-700 sticky top-16 lg:top-20 z-30 bg-cream-50/95 dark:bg-ink-900/95 backdrop-blur-md" aria-label="Blog filter controls">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+          <!-- Search -->
+          <div class="relative flex-1 max-w-sm">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-width="2" stroke-linecap="round"/></svg>
+            <input
+              type="search"
+              id="blog-search"
+              placeholder="Search articles…"
+              class="form-input pl-9 text-sm"
+              aria-label="Search blog posts"
+            />
+          </div>
+
+          <!-- Filters -->
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by category">
+            <button data-filter="all" class="filter-btn active-filter px-4 py-1.5 text-sm rounded-full border border-cream-300 dark:border-ink-600 text-ink-600 dark:text-ink-400 transition-all hover:border-forest-500">All</button>
+            <button data-filter="product" class="filter-btn px-4 py-1.5 text-sm rounded-full border border-cream-300 dark:border-ink-600 text-ink-600 dark:text-ink-400 transition-all hover:border-forest-500">Product</button>
+            <button data-filter="security" class="filter-btn px-4 py-1.5 text-sm rounded-full border border-cream-300 dark:border-ink-600 text-ink-600 dark:text-ink-400 transition-all hover:border-forest-500">Security</button>
+            <button data-filter="growth" class="filter-btn px-4 py-1.5 text-sm rounded-full border border-cream-300 dark:border-ink-600 text-ink-600 dark:text-ink-400 transition-all hover:border-forest-500">Growth</button>
+            <button data-filter="development" class="filter-btn px-4 py-1.5 text-sm rounded-full border border-cream-300 dark:border-ink-600 text-ink-600 dark:text-ink-400 transition-all hover:border-forest-500">Dev</button>
+            <button data-filter="performance" class="filter-btn px-4 py-1.5 text-sm rounded-full border border-cream-300 dark:border-ink-600 text-ink-600 dark:text-ink-400 transition-all hover:border-forest-500">Performance</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="py-16 lg:py-24" aria-label="Blog posts">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+
+        <!-- Featured post -->
+        <article data-category="product" class="blog-card mb-10 reveal grid md:grid-cols-2 gap-0" aria-label="Featured post">
+          <div class="blog-card-img md:h-auto bg-forest-500/12 dark:bg-forest-600/20 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none" aria-hidden="true">
+            <div class="w-16 h-16 bg-forest-500/20 rounded-2xl flex items-center justify-center">
+              <svg class="w-8 h-8 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="tag-pill">Product</span>
+              <span class="text-xs bg-amber-warm/10 text-amber-warm px-2.5 py-0.5 rounded-full font-medium">Featured</span>
+              <span class="text-ink-400 text-xs">Jun 12, 2025 · 6 min read</span>
+            </div>
+            <h2 class="font-display text-2xl font-medium text-ink-900 dark:text-cream-100 mb-3 leading-snug">
+              Why your SaaS product needs a design system before it scales
+            </h2>
+            <p class="text-ink-500 dark:text-ink-400 leading-relaxed font-light text-sm mb-6 line-clamp-3">
+              The decision to invest in a proper design system is one of the highest-leverage choices you can make early in your product journey. Before you hit 10 engineers and 50 components, the seams start to show.
+            </p>
+            <a href="#" class="inline-flex items-center gap-1.5 text-forest-500 text-sm font-medium hover:gap-3 transition-all">
+              Read article <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Post grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label="Blog articles">
+
+          <article data-category="security" class="blog-card reveal" role="listitem" style="--delay:0.1s">
+            <div class="blog-card-img bg-amber-warm/10 dark:bg-amber-warm/15">
+              <div class="w-12 h-12 bg-amber-warm/20 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-amber-warm" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="tag-pill">Security</span><span class="text-ink-400 text-xs">May 28, 2025 · 8 min</span></div>
+              <h3 class="font-display text-lg font-medium text-ink-900 dark:text-cream-100 mb-2 leading-snug">
+                <a href="#" class="hover:text-forest-500 transition-colors">Authentication best practices every web developer must know</a>
+              </h3>
+              <p class="text-ink-500 dark:text-ink-400 text-sm leading-relaxed font-light line-clamp-2">User auth is the most critical — and most misconfigured — part of any web application.</p>
+            </div>
+          </article>
+
+          <article data-category="growth" class="blog-card reveal" role="listitem" style="--delay:0.2s">
+            <div class="blog-card-img bg-forest-600/10 dark:bg-forest-700/20">
+              <div class="w-12 h-12 bg-forest-600/20 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-forest-600 dark:text-forest-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="tag-pill">Growth</span><span class="text-ink-400 text-xs">May 10, 2025 · 5 min</span></div>
+              <h3 class="font-display text-lg font-medium text-ink-900 dark:text-cream-100 mb-2 leading-snug">
+                <a href="#" class="hover:text-forest-500 transition-colors">From idea to launch: How we build MVPs in under 8 weeks</a>
+              </h3>
+              <p class="text-ink-500 dark:text-ink-400 text-sm leading-relaxed font-light line-clamp-2">Speed without cutting corners is an art form. Here's our exact process for launching viable products fast.</p>
+            </div>
+          </article>
+
+          <article data-category="development" class="blog-card reveal" role="listitem" style="--delay:0.3s">
+            <div class="blog-card-img bg-forest-500/10 dark:bg-forest-600/20">
+              <div class="w-12 h-12 bg-forest-500/15 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="tag-pill">Development</span><span class="text-ink-400 text-xs">Apr 22, 2025 · 7 min</span></div>
+              <h3 class="font-display text-lg font-medium text-ink-900 dark:text-cream-100 mb-2 leading-snug">
+                <a href="#" class="hover:text-forest-500 transition-colors">Building scalable component architecture with Tailwind CSS</a>
+              </h3>
+              <p class="text-ink-500 dark:text-ink-400 text-sm leading-relaxed font-light line-clamp-2">Tailwind is often misunderstood. Done right, it produces the most maintainable frontends you've ever worked on.</p>
+            </div>
+          </article>
+
+          <article data-category="performance" class="blog-card reveal" role="listitem" style="--delay:0.1s">
+            <div class="blog-card-img bg-ink-100 dark:bg-ink-700/40">
+              <div class="w-12 h-12 bg-ink-200 dark:bg-ink-700 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-ink-500 dark:text-ink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="tag-pill">Performance</span><span class="text-ink-400 text-xs">Apr 5, 2025 · 9 min</span></div>
+              <h3 class="font-display text-lg font-medium text-ink-900 dark:text-cream-100 mb-2 leading-snug">
+                <a href="#" class="hover:text-forest-500 transition-colors">Web performance in 2025: What still matters and what changed</a>
+              </h3>
+              <p class="text-ink-500 dark:text-ink-400 text-sm leading-relaxed font-light line-clamp-2">Core Web Vitals aren't going anywhere. A no-fluff breakdown of where to focus in 2025.</p>
+            </div>
+          </article>
+
+          <article data-category="process" class="blog-card reveal" role="listitem" style="--delay:0.2s">
+            <div class="blog-card-img bg-forest-400/10 dark:bg-forest-500/15">
+              <div class="w-12 h-12 bg-forest-400/20 rounded-xl flex items-center justify-center">
+                <svg class="w-6 h-6 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3"><span class="tag-pill">Process</span><span class="text-ink-400 text-xs">Mar 18, 2025 · 4 min</span></div>
+              <h3 class="font-display text-lg font-medium text-ink-900 dark:text-cream-100 mb-2 leading-snug">
+                <a href="#" class="hover:text-forest-500 transition-colors">The perfect client handoff: A developer's complete checklist</a>
+              </h3>
+              <p class="text-ink-500 dark:text-ink-400 text-sm leading-relaxed font-light line-clamp-2">How you close a project matters almost as much as how you built it. Our 40-point handoff checklist.</p>
+            </div>
+          </article>
+
+          <!-- Newsletter card -->
+          <div class="service-card-cta reveal flex flex-col justify-between" style="--delay:0.3s">
+            <div>
+              <div class="label-tag-light mb-4">Stay in the loop</div>
+              <h3 class="font-display text-xl font-medium text-white mb-3">Get new posts in your inbox</h3>
+              <p class="text-forest-200 text-sm font-light mb-5">Occasional, always useful. No spam, ever.</p>
+            </div>
+            <form id="newsletter-form" class="space-y-3" novalidate aria-label="Newsletter signup">
+              <label for="footer-email" class="sr-only">Email address</label>
+              <input type="email" id="footer-email" name="email" placeholder="your@email.com" required autocomplete="email" class="w-full bg-white/10 border border-white/20 text-white placeholder-forest-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-white/40 transition-all" aria-describedby="newsletter-error" />
+              <div id="newsletter-error" class="text-red-300 text-xs hidden" role="alert"></div>
+              <button type="submit" class="w-full bg-white text-forest-700 hover:bg-cream-100 py-2.5 rounded-xl text-sm font-medium transition-colors">Subscribe →</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink-900 dark:bg-ink-950 text-ink-300 pt-10 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink-500">
+        <p>© <span id="footer-year"></span> Lanre Digital Solutions.</p>
+        <div class="flex items-center gap-6">
+          <a href="index.html" class="hover:text-ink-300 transition-colors">Home</a>
+          <a href="services.html" class="hover:text-ink-300 transition-colors">Services</a>
+          <a href="contact.html" class="hover:text-ink-300 transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="fixed bottom-6 right-6 w-10 h-10 bg-forest-500 hover:bg-forest-600 text-white rounded-xl shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 z-40" aria-label="Back to top">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Lanre Digital Solutions — our story, values, and the team behind the work." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lanredigital.com/about.html" />
+  <title>About — Lanre Digital Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { display: ['Fraunces','Georgia','serif'], body: ['DM Sans','sans-serif'] },
+          colors: {
+            cream:  { 50:'#fdfaf5', 100:'#f9f3e8', 200:'#f2e6d0', 300:'#e8d5b2' },
+            forest: { 400:'#5a7c65', 500:'#3d6b4f', 600:'#2d5240', 700:'#1e3d2f', 800:'#112a1f' },
+            amber:  { warm:'#c8832a' },
+            ink:    { 50:'#f7f6f4', 100:'#eeebe6', 300:'#b8b0a4', 500:'#6b6358', 700:'#3a342e', 900:'#1a1612' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-body bg-cream-50 text-ink-700 dark:bg-ink-900 dark:text-ink-100 transition-colors duration-300">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-forest-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="banner">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12" aria-label="Main navigation">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="Lanre Digital — Home">
+          <div class="w-9 h-9 rounded-xl bg-forest-500 flex items-center justify-center shadow-md"><span class="font-display font-semibold text-white text-base">L</span></div>
+          <span class="font-display font-medium text-lg text-ink-900 dark:text-cream-50 hidden sm:block">Lanre<span class="text-forest-500">Digital</span></span>
+        </a>
+        <ul class="hidden lg:flex items-center gap-1" role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="w-10 h-10 rounded-xl flex items-center justify-center text-ink-500 dark:text-ink-300 hover:bg-cream-200 dark:hover:bg-ink-700 transition-colors" aria-label="Toggle dark mode">
+            <svg id="icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg id="icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 bg-forest-500 hover:bg-forest-600 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">Let's Talk</a>
+          <button id="menu-toggle" class="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center text-ink-500 hover:bg-cream-200 dark:hover:bg-ink-700 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="menu-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg id="menu-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden">
+        <div class="py-4 border-t border-cream-200 dark:border-ink-700 space-y-1">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="services.html" class="mobile-nav-link">Services</a>
+          <a href="blog.html" class="mobile-nav-link">Blog</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+          <div class="pt-3 border-t border-cream-200 dark:border-ink-700">
+            <a href="contact.html" class="block bg-forest-500 text-white text-center px-5 py-3 rounded-xl font-medium">Let's Talk</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Page Header -->
+    <section class="page-header" aria-labelledby="about-title">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
+        <div class="label-tag mb-5 inline-flex">Our story</div>
+        <h1 id="about-title" class="font-display text-5xl lg:text-6xl text-ink-900 dark:text-cream-50 font-medium leading-tight mb-5">
+          Built with <span class="italic font-light text-forest-500">purpose</span>
+        </h1>
+        <p class="text-ink-500 dark:text-ink-400 text-lg max-w-xl mx-auto leading-relaxed font-light">
+          We're a small, focused digital studio that believes the best digital products come from caring deeply about people — the ones who build them and the ones who use them.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-20 lg:py-28" aria-labelledby="mission-heading">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <div class="label-tag mb-5">Who we are</div>
+            <h2 id="mission-heading" class="font-display text-4xl lg:text-5xl text-ink-900 dark:text-cream-50 font-medium leading-tight mb-6">
+              A studio that cares<br />about the <span class="italic font-light text-forest-500">craft</span>
+            </h2>
+            <div class="space-y-4 text-ink-500 dark:text-ink-400 leading-relaxed font-light">
+              <p>Lanre Digital was founded with a clear conviction: there was a gap between clients who deserved exceptional digital products and agencies willing to truly invest in understanding their business.</p>
+              <p>We started as a one-person studio in Lagos, and we've grown into a tight-knit team of designers, engineers, and strategists who genuinely love what they build.</p>
+              <p>Every project we take on gets our full attention. We don't coast on templates or recycled solutions. Each product we ship is thought through from first principles, and we stay involved long after launch day.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 reveal" aria-label="Company values">
+            <div class="bg-forest-500 rounded-2xl p-6 col-span-2 sm:col-span-1">
+              <div class="font-display text-3xl font-light text-white mb-1">2024</div>
+              <div class="text-forest-200 text-sm">Founded in Lagos</div>
+            </div>
+            <div class="bg-white dark:bg-ink-800 border border-cream-200 dark:border-ink-700 rounded-2xl p-6">
+              <div class="font-display text-3xl font-light text-ink-900 dark:text-cream-50 mb-1">4+</div>
+              <div class="text-ink-400 text-sm">Projects shipped</div>
+            </div>
+            <div class="bg-white dark:bg-ink-800 border border-cream-200 dark:border-ink-700 rounded-2xl p-6">
+              <div class="font-display text-3xl font-light text-ink-900 dark:text-cream-50 mb-1">3</div>
+              <div class="text-ink-400 text-sm">Countries served</div>
+            </div>
+            <div class="bg-amber-warm rounded-2xl p-6">
+              <div class="font-display text-3xl font-light text-white mb-1">98%</div>
+              <div class="text-amber-light text-sm">Client satisfaction</div>
+            </div>
+            <div class="bg-white dark:bg-ink-800 border border-cream-200 dark:border-ink-700 rounded-2xl p-6 col-span-2 sm:col-span-1">
+              <div class="font-display text-3xl font-light text-ink-900 dark:text-cream-50 mb-1">∞</div>
+              <div class="text-ink-400 text-sm">Curiosity to keep learning</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20 lg:py-28 bg-cream-100 dark:bg-ink-800/50" aria-labelledby="values-heading">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="text-center mb-14 reveal">
+          <div class="label-tag mb-4 inline-flex">What guides us</div>
+          <h2 id="values-heading" class="font-display text-4xl lg:text-5xl text-ink-900 dark:text-cream-50 font-medium">Our values</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white dark:bg-ink-800 border border-cream-200 dark:border-ink-700 rounded-2xl p-7 reveal" style="--delay:0.1s">
+            <div class="w-11 h-11 bg-forest-500/10 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-5 h-5 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="font-display text-lg font-medium text-ink-900 dark:text-cream-100 mb-3">People first</h3>
+            <p class="text-ink-500 dark:text-ink-400 text-sm leading-relaxed font-light">Every decision we make such as the way we design, code, the process starts with how it affects real people.</p>
+          </div>
+          <div class="bg-white dark:bg-ink-800 border border-cream-200 dark:border-ink-700 rounded-2xl p-7 reveal" style="--delay:0.2s">
+            <div class="w-11 h-11 bg-amber-warm/10 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-5 h-5 text-amber-warm" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="font-display text-lg font-medium text-ink-900 dark:text-cream-100 mb-3">No compromises on quality</h3>
+            <p class="text-ink-500 dark:text-ink-400 text-sm leading-relaxed font-light">We'd rather ship one great product than three mediocre ones. Quality isn't a feature it's our baseline.</p>
+          </div>
+          <div class="bg-white dark:bg-ink-800 border border-cream-200 dark:border-ink-700 rounded-2xl p-7 reveal" style="--delay:0.3s">
+            <div class="w-11 h-11 bg-forest-500/10 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-5 h-5 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="font-display text-lg font-medium text-ink-900 dark:text-cream-100 mb-3">Radical transparency</h3>
+            <p class="text-ink-500 dark:text-ink-400 text-sm leading-relaxed font-light">We tell you what we think, even when it's not what you want to hear. That's how real partnerships work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="py-20 lg:py-28" aria-labelledby="team-heading">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="text-center mb-14 reveal">
+          <div class="label-tag mb-4 inline-flex">The team</div>
+          <h2 id="team-heading" class="font-display text-4xl lg:text-5xl text-ink-900 dark:text-cream-50 font-medium">The people behind the work</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div class="text-center reveal" style="--delay:0.1s">
+            <div class="w-24 h-24 bg-gradient-to-br from-forest-400 to-forest-700 rounded-2xl mx-auto mb-5 flex items-center justify-center shadow-md" aria-hidden="true">
+              <span class="font-display text-3xl text-white font-medium">L</span>
+            </div>
+            <h3 class="font-display text-xl font-medium text-ink-900 dark:text-cream-100 mb-1">Lanre Sanni</h3>
+            <div class="text-forest-500 text-sm font-medium mb-3">Founder &amp; Lead Engineer</div>
+            <p class="text-ink-500 dark:text-ink-400 text-sm leading-relaxed font-light">Front end developer and aspiring Full-stack developer with a passion for performance and accessibility. 2 years building products people love.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="pb-20 lg:pb-28 px-5 sm:px-8 lg:px-12" aria-labelledby="about-cta-heading">
+      <div class="max-w-4xl mx-auto text-center reveal">
+        <div class="bg-forest-700 rounded-3xl p-12 lg:p-16 relative overflow-hidden">
+          <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-12 -right-12 w-64 h-64 bg-forest-500/20 rounded-full blur-2xl"></div>
+          </div>
+          <div class="relative">
+            <h2 id="about-cta-heading" class="font-display text-4xl text-white font-medium mb-4">Want to work with us?</h2>
+            <p class="text-forest-200 font-light mb-8 max-w-md mx-auto">We're always open to interesting projects and good conversations.</p>
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-forest-700 hover:bg-cream-100 px-8 py-3.5 rounded-xl font-medium transition-all shadow-md">
+              Get in touch <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink-900 dark:bg-ink-950 text-ink-300 pt-10 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink-500">
+        <p>© <span id="footer-year"></span> Lanre Digital Solutions.</p>
+        <div class="flex items-center gap-6">
+          <a href="index.html" class="hover:text-ink-300 transition-colors">Home</a>
+          <a href="services.html" class="hover:text-ink-300 transition-colors">Services</a>
+          <a href="contact.html" class="hover:text-ink-300 transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="fixed bottom-6 right-6 w-10 h-10 bg-forest-500 hover:bg-forest-600 text-white rounded-xl shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 z-40" aria-label="Back to top">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <script src="app.js"></script>
+</body>
+</html>
